@@ -166,8 +166,9 @@
                         
                         <div class="relative bg-white rounded-2xl shadow-xl border border-slate-200 p-8 space-y-6">
                             <div class="flex items-center space-x-4">
-                                <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-navy-900 to-navy-800 flex items-center justify-center text-white text-2xl font-extrabold shadow-lg border-2 border-gold-400">
-                                    RMB
+                                <!-- Place for Profile Photo -->
+                                <div class="relative group w-20 h-20 rounded-2xl overflow-hidden border-2 border-gold-400 shadow-lg flex-shrink-0 bg-navy-900">
+                                    <img id="profile-img" src="foto-profil.jpeg" alt="Randa Mah Bengi" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='foto-profil.jpg';">
                                 </div>
                                 <div>
                                     <h3 class="font-heading font-bold text-xl text-navy-900">Randa Mah Bengi</h3>
@@ -529,60 +530,131 @@
                     </div>
 
                     <div class="space-y-4">
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-600 flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                                <i class="fa-solid fa-certificate"></i>
+                        <!-- TOEFL Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-600 flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                                    <i class="fa-solid fa-certificate"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">Oktober 2025</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">TOEFL-EQUIVALENT CERTIFICATE (Skor 350)</h4>
+                                    <p class="text-xs text-gold-600 font-medium">Pusat Bahasa Universitas Almuslim • No: 6275/PB-UMUSLIM/X/2025</p>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-[11px] font-semibold text-slate-400">Oktober 2025</span>
-                                <h4 class="font-heading font-bold text-navy-900 text-base">TOEFL-EQUIVALENT CERTIFICATE</h4>
-                                <p class="text-xs text-gold-600 font-medium">Pusat Bahasa Universitas Almuslim</p>
-                            </div>
+                            <button onclick="openCertModal('sertifikat-toefl.jpeg', 'TOEFL-EQUIVALENT CERTIFICATE (Skor 350)', 'Pusat Bahasa Universitas Almuslim')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
-                                <i class="fa-solid fa-graduation-cap"></i>
+                        <!-- BEM Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">Periode 2023 - 2024</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">Sertifikat Kepemimpinan BEM (Gubernur BEM)</h4>
+                                    <p class="text-xs text-gold-600 font-medium">BEM Fakultas Ilmu Komputer Universitas Almuslim</p>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-[11px] font-semibold text-slate-400">Juni 2026</span>
-                                <h4 class="font-heading font-bold text-navy-900 text-base">Pendidikan Pengawas Partisipatif</h4>
-                                <p class="text-xs text-gold-600 font-medium">Bawaslu Kab. Bener Meriah • Pengembangan Sosial Masyarakat</p>
-                            </div>
+                            <button onclick="openCertModal('sertifikat-BEM.jpg', 'Sertifikat Kepemimpinan Gubernur BEM FIKOM', 'Fakultas Ilmu Komputer Universitas Almuslim')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
-                                <i class="fa-solid fa-microphone"></i>
+                        <!-- HIMAIF Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-600 flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                                    <i class="fa-solid fa-sitemap"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">Periode 2023</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">Sertifikat Pengurus HIMAIF (Ketua Divisi)</h4>
+                                    <p class="text-xs text-gold-600 font-medium">Himpunan Mahasiswa Informatika Universitas Almuslim</p>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-[11px] font-semibold text-slate-400">Februari 2022</span>
-                                <h4 class="font-heading font-bold text-navy-900 text-base">Seminar Nasional “Merdeka dalam Bicara”</h4>
-                                <p class="text-xs text-gold-600 font-medium mb-1">HIMAIF Universitas Almuslim • Pengembangan Sosial Masyarakat</p>
-                                <p class="text-xs text-slate-500 leading-relaxed">Pengembangan wawasan & keterampilan komunikasi, kepercayaan diri menyampaikan gagasan, serta berpikir kritis.</p>
-                            </div>
+                            <button onclick="openCertModal('sertifikat-HIMAIF.jpg', 'Sertifikat Pengurus & Divisi Kaderisasi HIMAIF', 'Himpunan Mahasiswa Informatika')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
-                                <i class="fa-solid fa-bullhorn"></i>
+                        <!-- Merdeka Bicara Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-start justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">Februari 2023</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">Seminar Nasional “Merdeka dalam Bicara”</h4>
+                                    <p class="text-xs text-gold-600 font-medium mb-1">HIMAIF Universitas Almuslim • No: 05/HIMAIF/I/II/2023</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed">Pengembangan wawasan & keterampilan komunikasi, kepercayaan diri menyampaikan gagasan, serta public speaking.</p>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-[11px] font-semibold text-slate-400">Maret 2023</span>
-                                <h4 class="font-heading font-bold text-navy-900 text-base">Seminar Nasional Generasi Emas 2045</h4>
-                                <p class="text-xs text-gold-600 font-medium">Generasi Muda Peduli Pendidikan Indonesia (Grapensi)</p>
-                            </div>
+                            <button onclick="openCertModal('sertifikat-merdeka bicara.jpeg', 'Seminar Nasional Merdeka dalam Bicara', 'HIMAIF Universitas Almuslim')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-600 flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                                <i class="fa-solid fa-laptop-code"></i>
+                        <!-- Grapensi Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">Maret 2023</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">Seminar Nasional Membangun Generasi Emas 2045</h4>
+                                    <p class="text-xs text-gold-600 font-medium">GRAPENSI & SAPMA PP Bireuen • Ballroom Hotel Fajar</p>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-[11px] font-semibold text-slate-400">November 2022</span>
-                                <h4 class="font-heading font-bold text-navy-900 text-base">Bootcamp Nasional Permikomnas Wilayah 1</h4>
-                                <p class="text-xs text-gold-600 font-medium">Permikomnas & Himatif Unimal • TIK</p>
+                            <button onclick="openCertModal('sertifikat-grapensi.jpeg', 'Seminar Nasional Generasi Emas 2045', 'GRAPENSI & SAPMA PP Bireuen')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
+                        </div>
+
+                        <!-- Permikomnas Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-600 flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">November 2022</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">Bootcamp Nasional Permikomnas Wilayah 1</h4>
+                                    <p class="text-xs text-gold-600 font-medium">Permikomnas & Himatif Unimal • TIK</p>
+                                </div>
                             </div>
+                            <button onclick="openCertModal('sertifikat-permikomnas.jpeg', 'Bootcamp Nasional Permikomnas', 'Permikomnas & Himatif Unimal')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
+                        </div>
+
+                        <!-- Bawaslu Certificate -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm hover:border-gold-500/40 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 text-xl">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-semibold text-slate-400">Juni 2026</span>
+                                    <h4 class="font-heading font-bold text-navy-900 text-base">Pendidikan Pengawas Partisipatif</h4>
+                                    <p class="text-xs text-gold-600 font-medium">Bawaslu Kab. Bener Meriah • Pengembangan Sosial Masyarakat</p>
+                                </div>
+                            </div>
+                            <button onclick="openCertModal('sertifikat-bawaslu.jpg', 'Pendidikan Pengawas Partisipatif', 'Bawaslu Kab. Bener Meriah')" class="self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 text-xs font-bold transition-colors flex items-center gap-1.5 flex-shrink-0 border border-slate-200">
+                                <i class="fa-solid fa-image text-gold-600"></i>
+                                <span>Lihat Bukti</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -686,6 +758,28 @@
         </div>
     </div>
 
+    <!-- Certificate Lightbox Modal Popup -->
+    <div id="cert-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300">
+        <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-gold-500/20 transform transition-all scale-95 opacity-0" id="cert-modal-content">
+            <div class="p-4 sm:p-5 bg-navy-900 text-white flex items-center justify-between border-b border-navy-800">
+                <div>
+                    <h4 id="cert-modal-title" class="font-heading font-bold text-base sm:text-lg text-gold-400">Bukti Sertifikat</h4>
+                    <p id="cert-modal-subtitle" class="text-xs text-slate-300">Penerbit Sertifikat</p>
+                </div>
+                <button onclick="closeCertModal()" class="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 hover:text-navy-950 text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-4 sm:p-6 bg-slate-100 flex items-center justify-center min-h-[250px] max-h-[70vh] overflow-auto">
+                <img id="cert-modal-img" src="" alt="Bukti Sertifikat" class="max-w-full max-h-[60vh] object-contain rounded-xl shadow-md border border-slate-200" onerror="this.onerror=null; this.src='https://placehold.co/800x600/0f172a/facc15?text=File+Sertifikat+Belum+Diunggah';">
+            </div>
+            <div class="p-4 bg-white border-t border-slate-100 flex justify-between items-center text-xs text-slate-500">
+                <span><i class="fa-solid fa-circle-info text-gold-600 me-1"></i> Unggah foto sertifikat Anda dengan nama file yang sesuai</span>
+                <button onclick="closeCertModal()" class="px-4 py-2 rounded-xl bg-navy-900 text-white font-bold hover:bg-gold-600 transition-colors">Tutup</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-navy-950 text-white py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -782,6 +876,47 @@
                 toast.classList.remove('translate-y-0', 'opacity-100');
                 toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
             }, 4000);
+        }
+
+        // Certificate Lightbox Modal Functions with Smart Fallback
+        function openCertModal(imageSrc, title, subtitle) {
+            const modal = document.getElementById('cert-modal');
+            const modalContent = document.getElementById('cert-modal-content');
+            const img = document.getElementById('cert-modal-img');
+            const titleEl = document.getElementById('cert-modal-title');
+            const subTitleEl = document.getElementById('cert-modal-subtitle');
+
+            img.onerror = function() {
+                if (imageSrc.endsWith('.jpeg')) {
+                    this.src = imageSrc.replace('.jpeg', '.jpg');
+                } else if (imageSrc.endsWith('.jpg')) {
+                    this.src = imageSrc.replace('.jpg', '.jpeg');
+                } else {
+                    this.src = 'https://placehold.co/800x600/0f172a/facc15?text=Sertifikat+' + encodeURIComponent(title);
+                }
+                this.onerror = null;
+            };
+
+            img.src = imageSrc;
+            titleEl.textContent = title;
+            subTitleEl.textContent = subtitle;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeCertModal() {
+            const modal = document.getElementById('cert-modal');
+            const modalContent = document.getElementById('cert-modal-content');
+
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
         }
     </script>
 </body>
